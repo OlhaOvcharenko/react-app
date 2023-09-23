@@ -18,7 +18,7 @@ const SearchForm = props => {
 
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>
-            <TextInput placeholder="Search..." />
+            <TextInput onChange={e => setInputValue(e.target.value)}  placeholder="Search..." />
             <Button>
                 <span className="fa fa-search" />
             </Button>
