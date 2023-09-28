@@ -3,14 +3,12 @@ import initialState from './initialState';
 import shortid from 'shortid';
 import strContains from '../utils/strContains';
 
+
 //selectors
 export const getFilteredCards = ({ cards, searchTerm }, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchTerm));
 
-export const getAllColumns = (state) =>  state.columns;
-
 export const getListById = ({lists}, listId) => lists.find(list => list.id === listId);
-console.log(getListById, "getListById");
 
 export const getColumnsByList = ({columns}, listId) => columns.filter(column => column.columnId === listId);
 console.log(getColumnsByList, "Column");

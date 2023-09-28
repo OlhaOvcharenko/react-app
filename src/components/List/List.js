@@ -1,17 +1,20 @@
+import React from 'react';
 import styles from './List.module.scss';
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
-//import { getAllColumns } from '../../redux/store';
 import { getListById } from '../../redux/store';
 import { getColumnsByList } from '../../redux/store';
 import { useParams } from 'react-router-dom';
+
 
 
 const List = () => {
 
   //const columns = useSelector(getAllColumns);
   const { listId } = useParams();
+
+  console.log('listId', listId);
 
   const columns = useSelector((state) => getColumnsByList(state, listId));
   console.log("columns", columns);
@@ -36,9 +39,6 @@ const List = () => {
     </div>
   );
 };
-
-
-
 
 
 export default List;

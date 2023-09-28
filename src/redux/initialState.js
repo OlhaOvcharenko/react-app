@@ -3,37 +3,42 @@ const initialState = {
   lists: [
     {
       id: 1,
-      title: 'Things to do...',
-      description: 'Interesting things I want to check out'
+      title: "Things to do...",
+      description: "Interesting things I want to check out",
     },
-   {
+    {
       id: 2,
-      title: 'Test list',
-      description: 'Lorem Ipsum'
-   }
+      title: "Test list",
+      description: "Lorem Ipsum",
+    },
   ],
-    
+
+
   columns: [
     {
       id: 1,
-      title: 'Books',
-      icon: 'book',
       listId: 1,
+      title: "Books",
+      icon: "book",
     },
     {
       id: 2,
-      title: 'Movies',
-      icon: 'film',
       listId: 1,
+      title: "Movies",
+      icon: "film",
     },
     {
       id: 3,
-      title: 'Games',
-      icon: 'gamepad',
       listId: 1,
+      title: "Games",
+      icon: "gamepad",
     },
-
-    { listId: 2,},
+    {
+      id: 4,
+      listId: 2,
+      title: "Songs",
+      icon: "music",
+    },
   ],
 
   cards: [
