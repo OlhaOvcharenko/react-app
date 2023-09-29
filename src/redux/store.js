@@ -8,9 +8,9 @@ import strContains from '../utils/strContains';
 export const getFilteredCards = ({ cards, searchTerm }, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchTerm));
 
-export const getListById = ({lists}, listId) => lists.find(list => list.id === listId);
+export const getListById = ({lists}, listId) => lists.find((list) => list.id === listId);
 
-export const getColumnsByList = ({columns}, listId) => columns.filter(column => column.columnId === listId);
+export const getColumnsByList = ({columns}, listId) => columns.filter((column) => column.listId === listId);
 console.log(getColumnsByList, "Column");
 
 // action creators

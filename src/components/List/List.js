@@ -13,10 +13,10 @@ const List = props => {
   //const columns = useSelector(getAllColumns);
 
 
-  const columns = useSelector((state) => getColumnsByList(state, props.id));
+  const columns = useSelector(state => getColumnsByList(state, 1));
   console.log("columns", columns);
 
-  const listData = useSelector((state) => getListById(state, props.id));
+  const listData = useSelector(state => getListById(state, 1));
   console.log("lists",listData);
 
   return (
