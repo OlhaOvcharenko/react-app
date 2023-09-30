@@ -1,4 +1,4 @@
-import { addList } from '../../redux/store';
+import { addList } from '../../redux/listsRedux';
 import styles from '../ListForm/ListForm.module.scss';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
