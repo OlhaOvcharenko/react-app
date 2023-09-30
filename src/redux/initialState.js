@@ -42,12 +42,12 @@ const initialState = {
   ],
 
   cards: [
-    { id: '1', columnId: '1', title: 'This is Going to Hurt', isFavorite: false, icon: 'star-o' },
-    { id: '2', columnId: '1', title: 'Interpreter of Maladies', isFavorite: false, icon: 'star-o' },
-    { id: '3', columnId: '2', title: 'Harry Potter', isFavorite: false, icon: 'star-o' },
-    { id: '4', columnId: '2', title: 'Star Wars', isFavorite: false, icon: 'star-o'},
-    { id: '5', columnId: '3', title: 'The Witcher', isFavorite: false, icon: 'star-o' },
-    { id: '6', columnId: '3', title: 'Skyrim', isFavorite: false, icon: 'star-o' }
+    { id: '1', columnId: '1', title: 'This is Going to Hurt', isFavorite: false },
+    { id: '2', columnId: '1', title: 'Interpreter of Maladies', isFavorite: false},
+    { id: '3', columnId: '2', title: 'Harry Potter', isFavorite: false },
+    { id: '4', columnId: '2', title: 'Star Wars', isFavorite: false },
+    { id: '5', columnId: '3', title: 'The Witcher', isFavorite: false },
+    { id: '6', columnId: '3', title: 'Skyrim', isFavorite: false }
   ],
 
   searchTerm: '',

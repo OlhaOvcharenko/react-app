@@ -19,7 +19,7 @@ const Card = props => {
             {props.title}
             <button  onClick={handleToggleFavorite} 
              className = {clsx({ [styles.favorite]: props.isFavorite === true,})}>
-                <span className={'fa fa-' + props.icon} />
+                <span className={'fa fa-star-o'} />
             </button>
         </li>
     );

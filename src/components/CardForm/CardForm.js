@@ -11,11 +11,13 @@ const CardForm = props => {
     const dispatch = useDispatch();
 
     const [title, setTitle] = useState('');
+    const [icon, setIcon] = useState('');
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addCard({columnId: props.columnId, title}));
+        dispatch(addCard({columnId: props.columnId, title, icon}));
         setTitle('');
+        setIcon('');
     };
     
 	return (
