@@ -21,11 +21,11 @@ const ListForm = props => {
 
   return (
     <form className={styles.listForm} onSubmit={handleSubmit}>
-        <span className={styles.lable}>Title:</span> <TextInput value={title} onChange={e => setTitle(e.target.value)} />
-        <span className={styles.lable}>Description:</span> <TextInput value={description} onChange={e => setDescription(e.target.value)} />
-        <Button>
-            <span className="fa fa-search" />
-        </Button>
+      <span className={styles.lable}>Title:</span> <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+      <span className={styles.lable}>Description:</span> <TextInput value={description} onChange={e => setDescription(e.target.value)} />
+      <Button>
+         Add List 
+      </Button>
     </form>
   );
 }
