@@ -7,32 +7,25 @@ import { getFavoriteCards } from '../../redux/cardsRedux';
 
 const Favorite = (props) => {
 
-  const favoriteCards = useSelector((state) => getFavoriteCards(state, props.id));
+  const favoriteCards =  useSelector((state) => getFavoriteCards(state, props.id));
 
-  if (!favoriteCards?.length) { 
-
-    return(
-      <div>
-        <PageTitle>Favorite</PageTitle>
-        <p className={styles.emptylist}>No cards...</p>
-      </div>
-    ) 
-
-  } else {
-
-    return(
-      <div>
-        <PageTitle>Favorite</PageTitle>
-        <article className = {styles.items}>
+  return (
+    <div>
+      <PageTitle>Favorite</PageTitle>
+      <article className={styles.items}>
+        {favoriteCards?.length ? (
           <ul className={styles.cards}>
             {favoriteCards.map((card) => (
-            <Card key={card.id} {...card} />
+              <Card key={card.id} {...card} />
             ))}
           </ul>
-        </article>
-      </div>
-    )
-  }
+        ) : (
+          <p className={styles.emptylist}>No cards...</p>
+        )}
+      </article>
+    </div>
+  );
+
 };
 
 export default Favorite;
