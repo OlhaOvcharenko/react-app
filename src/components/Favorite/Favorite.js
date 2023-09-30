@@ -9,6 +9,7 @@ const Favorite = (props) => {
 
   const favoriteCards = useSelector((state) => getFavoriteCards(state, props.id));
 
+  if (favoriteCards && favoriteCards.length > 0){
     return(
       <div>
         <PageTitle>Favorite</PageTitle>
@@ -20,7 +21,16 @@ const Favorite = (props) => {
           </ul>
         </article>
       </div>
-    );
+    )
+  } else {
+    return ( 
+      <div> 
+        <PageTitle>Favorite</PageTitle>
+        <p className={styles.emptylist}>No cards...</p>
+      </div>
+    )
+  }
+
 };
 
 export default Favorite;
