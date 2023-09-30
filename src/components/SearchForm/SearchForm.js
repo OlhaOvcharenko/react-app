@@ -4,18 +4,23 @@ import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { updateSearching } from '../../redux/store';
+import { useEffect } from 'react';
 
-const SearchForm = props => {
+const SearchForm = () => {
 
     const [inputValue, setInputValue] = useState('');
 
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
-      e.preventDefault();
-      dispatch(updateSearching(inputValue));
-      setInputValue('');
+        e.preventDefault();
+        dispatch(updateSearching(inputValue));
     };
+
+    useEffect(() => {
+        // Zeruj state.searchString przy inicjacji komponentu
+        dispatch(updateSearching(''));
+    }, [dispatch]);
 
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>
