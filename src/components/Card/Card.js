@@ -13,11 +13,12 @@ const Card = props => {
         dispatch(addToFavorite(props.id));
     };
 
+
     return (
         <li className={styles.card}>
             {props.title}
             <button  onClick={handleToggleFavorite} 
-             className = {clsx(styles.span, props.isFavorite === true && styles.favorite)}>
+             className = {clsx({ [styles.favorite]: props.isFavorite === true,})}>
                 <span className={'fa fa-' + props.icon} />
             </button>
         </li>
