@@ -17,8 +17,13 @@ button {
     background-color: $color-light;
 }
 
-.favorite {
-    span {
-        color: $color-warning;
-    }
+span {
+    padding: 3px;
 }
+
+.isFavorite {
+   color: $color-warning;
+}
+
+
+
