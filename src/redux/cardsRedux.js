@@ -14,7 +14,6 @@ const ADD_CARD = createActionName('ADD_CARD');
 const TOGGLE_CARD_FAVORITE = createActionName('TOGGLE_CARD_FAVORITE');
 const DELETE_CARD = createActionName('DELETE_CARD');
 
-
 // action creators
 export const addCard = payload => ({ type: ADD_CARD, payload });
 export const addToFavorite = payload => ({type: TOGGLE_CARD_FAVORITE, payload });
